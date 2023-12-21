@@ -2,6 +2,7 @@ package com.example.weather_analyzer.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -24,7 +26,7 @@ public class Weather {
     @Column(name = "time")
     private LocalTime time;
     @Column(name = "temperature")
-    private Integer temperature;
+    private Double temperature;
     @Column(name = "wind_speed")
     private Double windSpeed;
     @Column(name = "pressure")

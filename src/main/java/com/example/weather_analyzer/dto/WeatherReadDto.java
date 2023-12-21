@@ -2,21 +2,23 @@ package com.example.weather_analyzer.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class WeatherReadDto {
     @JsonProperty("location")
     private String location;
     @JsonProperty("temperature")
-    private Integer temperature;
+    private Double temperature;
     @JsonProperty("wind_speed")
-    private Integer windSpeed;
+    private Double windSpeed;
     @JsonProperty("pressure")
-    private Integer pressure;
+    private Double pressure;
     @JsonProperty("humidity")
     private Integer humidity;
     @JsonProperty("weather_conditions")
