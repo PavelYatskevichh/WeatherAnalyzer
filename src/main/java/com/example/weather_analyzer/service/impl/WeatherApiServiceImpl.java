@@ -20,7 +20,7 @@ public class WeatherApiServiceImpl implements WeatherApiService {
     private final WeatherRepository weatherRepository;
     private final RestTemplate restTemplate;
     @Value("${weatherApi.url}")
-    private String apiUrl;
+    private final String apiUrl;
 
     @Override
     @Scheduled(fixedRate = 900000)
